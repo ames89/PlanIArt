@@ -8,28 +8,19 @@ import {
   MarkersPlugin,
   ReactPhotoSphereViewer,
 } from "react-photo-sphere-viewer";
-import Photos from "./photos.json";
 import QuienesSomos from "./quienes-somos";
 import { Viewer } from "@photo-sphere-viewer/core";
 
-export const PhotoSphere = () => {
-  const [photos] = useState(() => {
-    let horizonSrc = [...Photos.horizon];
-    const horizonRes: string[] = [];
-    for (let i = 0; i < 4; i++) {
-      const rand = Math.floor(Math.random() * horizonSrc.length);
-      horizonRes.push(horizonSrc.splice(rand, 1)[0]);
-    }
-    return {
-      left: horizonRes[0],
-      front: horizonRes[1],
-      right: horizonRes[2],
-      back: horizonRes[3],
-      top: Photos.sky[Math.floor(Math.random() * Photos.sky.length)],
-      bottom: Photos.floor[Math.floor(Math.random() * Photos.floor.length)],
-    };
-  });
+const faces = {
+  left: "",
+  front: "",
+  right: "",
+  back: "",
+  top: "",
+  bottom: "",
+};
 
+export const PhotoSphere = () => {
   const handleReady = (instance: Viewer) => {
     const markersPlugs = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
     if (!markersPlugs) return;
@@ -43,7 +34,7 @@ export const PhotoSphere = () => {
 
   return (
     <ReactPhotoSphereViewer
-      src={photos as unknown as string}
+      src={faces as unknown as string}
       height="100%"
       width="100%"
       adapter={CubemapAdapter}
