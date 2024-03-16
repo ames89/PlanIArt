@@ -25,13 +25,7 @@ export const PhotoSphere = () => {
   const handleReady = (instance: Viewer) => {
     const markersPlugs = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
     if (!markersPlugs) return;
-    // markersPlugs.addEventListener("select-marker", (item) => {
-    //   console.log(item);
-    //   switch (item.marker.id) {
-    //     case "instagram":
-    //       window.location.href = "https://www.instagram.com/amoikacr";
-    //   }
-    // });
+
     instance.addEventListener("click", ({ data }) => {
       console.log(
         `${data.rightclick ? "right " : ""}clicked at yaw: ${data.yaw} pitch: ${data.pitch}`
