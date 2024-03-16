@@ -47,10 +47,10 @@ export const PhotoSphere = () => {
           {
             markers: [
               {
-                id: "panel1",
+                id: "titulo",
                 position: {
                   yaw: "0deg",
-                  pitch: "0.46",
+                  pitch: "0.5",
                 },
                 html: "<h1>Bienvenidos a PlanIArt</h1>",
                 anchor: "bottom center",
@@ -65,15 +65,15 @@ export const PhotoSphere = () => {
                 },
               },
               {
-                id: "panel2",
+                id: "panel1",
                 position: {
                   yaw: "0deg",
-                  pitch: "0",
+                  pitch: "0.45",
                 },
                 html: Semana1,
-                anchor: "center center",
+                anchor: "top center",
                 style: {
-                  maxWidth: "60vw",
+                  maxWidth: "80vw",
                   backgroundColor: "white",
                   fontSize: "20px",
                   fontFamily: "Helvetica, sans-serif",
