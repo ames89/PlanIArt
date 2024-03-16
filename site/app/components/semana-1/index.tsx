@@ -1,7 +1,7 @@
 import { renderToString } from "react-dom/server";
 import Css from "./semana-1.module.scss";
 
-const QuienesSomos: React.FC = () => {
+const Semana1: React.FC = () => {
   return (
     <>
       <h1>Hola Mundo</h1>
@@ -21,4 +21,4 @@ const QuienesSomos: React.FC = () => {
   );
 };
 
-export default renderToString(<QuienesSomos />);
+export default renderToString(<Semana1 />);
