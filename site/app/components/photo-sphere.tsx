@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React from "react";
 import {
   AutorotatePlugin,
   CubemapAdapter,
@@ -9,15 +9,16 @@ import {
   ReactPhotoSphereViewer,
 } from "react-photo-sphere-viewer";
 import QuienesSomos from "./quienes-somos";
+import Semana1 from "./semana-1";
 import { Viewer } from "@photo-sphere-viewer/core";
 
 const faces = {
-  left: "",
-  front: "",
-  right: "",
-  back: "",
-  top: "",
-  bottom: "",
+  left: "/img/2.webp",
+  front: "/img/2.webp",
+  right: "/img/2.webp",
+  back: "/img/2.webp",
+  top: "/img/2.webp",
+  bottom: "/img/2.webp",
 };
 
 export const PhotoSphere = () => {
@@ -25,10 +26,16 @@ export const PhotoSphere = () => {
     const markersPlugs = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
     if (!markersPlugs) return;
     markersPlugs.addEventListener("select-marker", (item) => {
+      console.log(item);
       switch (item.marker.id) {
         case "instagram":
           window.location.href = "https://www.instagram.com/amoikacr";
       }
+    });
+    instance.addEventListener("click", ({ data }) => {
+      console.log(
+        `${data.rightclick ? "right " : ""}clicked at yaw: ${data.yaw} pitch: ${data.pitch}`
+      );
     });
   };
 
@@ -40,37 +47,55 @@ export const PhotoSphere = () => {
       adapter={CubemapAdapter}
       defaultZoomLvl={0}
       plugins={[
-        AutorotatePlugin,
+        // AutorotatePlugin,
         GyroscopePlugin,
         [
           MarkersPlugin,
           {
             markers: [
               {
-                id: "image",
-                position: { yaw: "0deg", pitch: "0deg" },
-                image: "pin-red.png",
-                anchor: "bottom center",
-                size: { width: 64, height: 64 },
-                tooltip: "Descubre quienes somos",
-                content: QuienesSomos,
-              },
-              {
-                id: "instagram",
+                id: "panel1",
                 position: {
                   yaw: "0deg",
-                  pitch: "-15deg",
+                  pitch: "0.46",
                 },
-                image: "instagram_logo.svg",
+                html: "<h1>Bienvenidos a PlanIArt</h1>",
                 anchor: "bottom center",
-                size: { width: 64, height: 64 },
-                tooltip: "Accede a nuestro instagram",
+                style: {
+                  backgroundColor: "#0007",
+                  color: "white",
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "20px",
+                  maxWidth: "240px",
+                  padding: "0 10px",
+                  textAlign: "center",
+                },
+              },
+              {
+                id: "panel2",
+                position: {
+                  yaw: "0deg",
+                  pitch: "0",
+                },
+                html: Semana1,
+                anchor: "center center",
+                style: {
+                  maxWidth: "60vw",
+                  backgroundColor: "white",
+                  fontSize: "20px",
+                  fontFamily: "Helvetica, sans-serif",
+                  textAlign: "center",
+                },
               },
             ],
           },
         ],
       ]}
-      navbar={["zoom", "gyroscope", "autorotate"]}
+      navbar={[
+        "zoom",
+        "gyroscope",
+        //  "autorotate"
+      ]}
       onReady={handleReady}
     />
   );
