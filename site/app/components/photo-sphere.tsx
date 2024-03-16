@@ -8,7 +8,6 @@ import {
   MarkersPlugin,
   ReactPhotoSphereViewer,
 } from "react-photo-sphere-viewer";
-import QuienesSomos from "./quienes-somos";
 import Semana1 from "./semana-1";
 import { Viewer } from "@photo-sphere-viewer/core";
 
