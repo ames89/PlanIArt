@@ -37,10 +37,21 @@ export const PhotoSphere = () => {
     const markersPlugs = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
     if (!markersPlugs) return;
 
-    instance.addEventListener("click", ({ data }) => {
-      console.log(
-        `${data.rightclick ? "right " : ""}clicked at yaw: ${data.yaw} pitch: ${data.pitch}`
-      );
+    // instance.addEventListener("click", ({ data }) => {
+    //   console.log(
+    //     `${data.rightclick ? "right " : ""}clicked at yaw: ${data.yaw} pitch: ${data.pitch}`
+    //   );
+    // });
+
+    markersPlugs.addEventListener("select-marker", ({ marker }) => {
+      // console.log("click marker", marker);
+      switch (marker.id) {
+        case "semana1":
+          window.open(
+            "https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807",
+            "_blank"
+          );
+      }
     });
   };
 
