@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PlanIArt",
-  description: "Bienvenidos",
+  description: "Atención y PlanIArt es todo lo que necesitas",
 };
 
 export default function RootLayout({

@@ -12,12 +12,12 @@ import Semana1 from "./semana-1";
 import { Viewer } from "@photo-sphere-viewer/core";
 
 const faces = {
-  left: "/img/2.webp",
-  front: "/img/2.webp",
-  right: "/img/2.webp",
-  back: "/img/2.webp",
-  top: "/img/2.webp",
-  bottom: "/img/2.webp",
+  left: "/img/optim.jpg",
+  front: "/img/optim.jpg",
+  right: "/img/optim.jpg",
+  back: "/img/optim.jpg",
+  top: "/img/optim.jpg",
+  bottom: "/img/optim.jpg",
 };
 
 export const PhotoSphere = () => {
@@ -52,14 +52,14 @@ export const PhotoSphere = () => {
                   yaw: "0deg",
                   pitch: "0.5",
                 },
-                html: "<h1>Bienvenidos a PlanIArt</h1>",
+                html: "<h1>Atención y PlanIArt es todo lo que necesitas</h1>",
                 anchor: "bottom center",
                 style: {
                   backgroundColor: "#0007",
                   color: "white",
                   fontFamily: "Helvetica, sans-serif",
                   fontSize: "20px",
-                  maxWidth: "240px",
+                  maxWidth: "90vw",
                   padding: "0 10px",
                   textAlign: "center",
                 },
@@ -73,10 +73,11 @@ export const PhotoSphere = () => {
                 html: Semana1,
                 anchor: "top center",
                 style: {
-                  maxWidth: "80vw",
-                  backgroundColor: "white",
-                  fontSize: "20px",
+                  backgroundColor: "#fffb",
                   fontFamily: "Helvetica, sans-serif",
+                  fontSize: "20px",
+                  maxWidth: "80vw",
+                  padding: "20px",
                   textAlign: "center",
                 },
               },

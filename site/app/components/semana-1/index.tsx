@@ -4,13 +4,19 @@ import Css from "./semana-1.module.scss";
 const Semana1: React.FC = () => {
   return (
     <>
-      <h1>Hola Mundo</h1>
+      <p>¡Bienvenidos al primer episodio del podcast PlanIArt!</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-        tincidunt dapibus ex, vel rhoncus mauris placerat bibendum. Phasellus in
-        est lacinia, mollis neque nec, tristique metus. Proin ligula eros,
-        luctus a elit vestibulum, congue tempor nibh. Sed volutpat nibh erat, ut
-        posuere tortor vestibulum nec. Mauris vel fringilla massa. Vivamus.
+        Mi nombre es Alejandra Rivas, soy Licenciada en Informática, tengo 35
+        años y actualmente trabajo como Ingeniera en QA de software.
+      </p>
+      <p>
+        El objetivo del podcast es conocer el fascinante mundo de la
+        planificación automática y su impacto en la industria manufacturera.
+      </p>
+      <p>
+        El podcast es realizado como primera actividad de entrega para la
+        asignatura Planificación Automática impartida por el docente Roberto
+        Fuentes. En esta página web estaré publicando las próximas entregas.
       </p>
       <p>
         <a href="javascript:void 0">
