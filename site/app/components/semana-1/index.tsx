@@ -1,9 +1,12 @@
 import { renderToString } from "react-dom/server";
-import Css from "./semana-1.module.scss";
+import Css from "./semana.module.scss";
 
 const Semana1: React.FC = () => {
   return (
-    <>
+    <div className={Css.container}>
+      <h1 className={Css.header}>
+        Fundamentos de la Planificación Automática en la Manufactura
+      </h1>
       <p>¡Bienvenidos al primer episodio del podcast PlanIArt!</p>
       <p>
         Mi nombre es Alejandra Rivas, soy Licenciada en Informática, tengo 35
@@ -26,7 +29,7 @@ const Semana1: React.FC = () => {
           <img className={Css.img} src="/icons/podcast.svg" />
         </a>
       </p>
-    </>
+    </div>
   );
 };
 

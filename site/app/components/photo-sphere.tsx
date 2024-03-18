@@ -9,6 +9,9 @@ import {
   ReactPhotoSphereViewer,
 } from "react-photo-sphere-viewer";
 import Semana1 from "./semana-1";
+import Semana2 from "./semana-2";
+import Semana3 from "./semana-3";
+import Semana4 from "./semana-4";
 import { Viewer } from "@photo-sphere-viewer/core";
 
 const faces = {
@@ -71,6 +74,57 @@ export const PhotoSphere = () => {
                   pitch: "0.45",
                 },
                 html: Semana1,
+                anchor: "top center",
+                style: {
+                  backgroundColor: "#fffb",
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "20px",
+                  maxWidth: "80vw",
+                  padding: "20px",
+                  textAlign: "center",
+                },
+              },
+              {
+                id: "panel2",
+                position: {
+                  yaw: "90deg",
+                  pitch: "0.45",
+                },
+                html: Semana2,
+                anchor: "top center",
+                style: {
+                  backgroundColor: "#fffb",
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "20px",
+                  maxWidth: "80vw",
+                  padding: "20px",
+                  textAlign: "center",
+                },
+              },
+              {
+                id: "panel3",
+                position: {
+                  yaw: "180deg",
+                  pitch: "0.45",
+                },
+                html: Semana3,
+                anchor: "top center",
+                style: {
+                  backgroundColor: "#fffb",
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "20px",
+                  maxWidth: "80vw",
+                  padding: "20px",
+                  textAlign: "center",
+                },
+              },
+              {
+                id: "panel4",
+                position: {
+                  yaw: "270deg",
+                  pitch: "0.45",
+                },
+                html: Semana4,
                 anchor: "top center",
                 style: {
                   backgroundColor: "#fffb",
