@@ -23,6 +23,15 @@ const faces = {
   bottom: "/img/optim.jpg",
 };
 
+const styles = {
+  backgroundColor: "#fffb",
+  fontFamily: "Helvetica, sans-serif",
+  fontSize: "20px",
+  maxWidth: "80vw",
+  padding: "20px",
+  textAlign: "center",
+};
+
 export const PhotoSphere = () => {
   const handleReady = (instance: Viewer) => {
     const markersPlugs = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
@@ -68,72 +77,44 @@ export const PhotoSphere = () => {
                 },
               },
               {
-                id: "panel1",
+                id: "semana1",
                 position: {
                   yaw: "0deg",
                   pitch: "0.45",
                 },
                 html: Semana1,
                 anchor: "top center",
-                style: {
-                  backgroundColor: "#fffb",
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "20px",
-                  maxWidth: "80vw",
-                  padding: "20px",
-                  textAlign: "center",
-                },
+                style: styles,
               },
               {
-                id: "panel2",
+                id: "semana2",
                 position: {
                   yaw: "90deg",
                   pitch: "0.45",
                 },
                 html: Semana2,
                 anchor: "top center",
-                style: {
-                  backgroundColor: "#fffb",
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "20px",
-                  maxWidth: "80vw",
-                  padding: "20px",
-                  textAlign: "center",
-                },
+                style: styles,
               },
               {
-                id: "panel3",
+                id: "semana3",
                 position: {
                   yaw: "180deg",
                   pitch: "0.45",
                 },
                 html: Semana3,
                 anchor: "top center",
-                style: {
-                  backgroundColor: "#fffb",
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "20px",
-                  maxWidth: "80vw",
-                  padding: "20px",
-                  textAlign: "center",
-                },
+                style: styles,
               },
               {
-                id: "panel4",
+                id: "semana4",
                 position: {
                   yaw: "270deg",
                   pitch: "0.45",
                 },
                 html: Semana4,
                 anchor: "top center",
-                style: {
-                  backgroundColor: "#fffb",
-                  fontFamily: "Helvetica, sans-serif",
-                  fontSize: "20px",
-                  maxWidth: "80vw",
-                  padding: "20px",
-                  textAlign: "center",
-                },
+                style: styles,
               },
             ],
           },
@@ -142,7 +123,47 @@ export const PhotoSphere = () => {
       navbar={[
         "zoom",
         "gyroscope",
-        //  "autorotate"
+        //  "autorotate",
+        {
+          content: "Semana 1",
+          onClick: (viewer) => {
+            viewer.animate({
+              speed: 700,
+              yaw: "0deg",
+              pitch: "0",
+            });
+          },
+        },
+        {
+          content: "Semana 2",
+          onClick: (viewer) => {
+            viewer.animate({
+              speed: 700,
+              yaw: "90deg",
+              pitch: "0",
+            });
+          },
+        },
+        {
+          content: "Semana 3",
+          onClick: (viewer) => {
+            viewer.animate({
+              speed: 700,
+              yaw: "180deg",
+              pitch: "0",
+            });
+          },
+        },
+        {
+          content: "Semana 4",
+          onClick: (viewer) => {
+            viewer.animate({
+              speed: 700,
+              yaw: "270deg",
+              pitch: "0",
+            });
+          },
+        },
       ]}
       onReady={handleReady}
     />
