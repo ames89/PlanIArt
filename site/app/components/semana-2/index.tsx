@@ -7,7 +7,7 @@ const Semana: React.FC = () => {
       <h1 className={Css.header}>
         Aplicaciones de la Planificación Automática en la Industria 4.0
       </h1>
-      <p>Pronto mas información</p>
+      <p>¡Pronto más información!</p>
     </div>
   );
 };
