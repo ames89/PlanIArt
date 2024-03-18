@@ -28,7 +28,7 @@ const Semana: React.FC = () => {
       </p>
       <p>
         <a href="https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807">
-          https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807
+          Escuchar
         </a>
       </p>
     </div>
