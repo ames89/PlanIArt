@@ -26,6 +26,11 @@ const Semana: React.FC = () => {
           <img className={Css.img} src="/icons/podcast.svg" />
         </a>
       </p>
+      <p>
+        <a href="https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807">
+          https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807
+        </a>
+      </p>
     </div>
   );
 };
