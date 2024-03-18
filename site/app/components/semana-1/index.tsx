@@ -1,7 +1,7 @@
 import { renderToString } from "react-dom/server";
 import Css from "./semana.module.scss";
 
-const Semana1: React.FC = () => {
+const Semana: React.FC = () => {
   return (
     <div className={Css.container}>
       <h1 className={Css.header}>
@@ -33,4 +33,4 @@ const Semana1: React.FC = () => {
   );
 };
 
-export default renderToString(<Semana1 />);
+export default renderToString(<Semana />);
