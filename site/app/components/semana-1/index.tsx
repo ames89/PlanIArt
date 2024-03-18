@@ -22,10 +22,7 @@ const Semana: React.FC = () => {
         Fuentes. En esta página web estaré publicando las próximas entregas.
       </p>
       <p>
-        <a
-          target="_blank"
-          href="https://www.spreaker.com/podcast/planiart--6121893"
-        >
+        <a href="https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807">
           <img className={Css.img} src="/icons/podcast.svg" />
         </a>
       </p>
