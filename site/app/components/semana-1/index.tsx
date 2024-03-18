@@ -19,7 +19,10 @@ const Semana1: React.FC = () => {
         Fuentes. En esta página web estaré publicando las próximas entregas.
       </p>
       <p>
-        <a href="javascript:void 0">
+        <a
+          target="_blank"
+          href="https://www.spreaker.com/podcast/planiart--6121893"
+        >
           <img className={Css.img} src="/icons/podcast.svg" />
         </a>
       </p>
