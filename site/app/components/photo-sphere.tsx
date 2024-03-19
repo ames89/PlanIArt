@@ -43,16 +43,16 @@ export const PhotoSphere = () => {
     //   );
     // });
 
-    // markersPlugs.addEventListener("select-marker", ({ marker }) => {
-    //   // console.log("click marker", marker);
-    //   switch (marker.id) {
-    //     case "semana1":
-    //       window.open(
-    //         "https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807",
-    //         "_blank"
-    //       );
-    //   }
-    // });
+    markersPlugs.addEventListener("select-marker", ({ marker }) => {
+      console.log("click marker", marker);
+      switch (marker.id) {
+        case "semana1":
+          window.open(
+            "https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807",
+            "_blank"
+          );
+      }
+    });
   };
 
   return (
