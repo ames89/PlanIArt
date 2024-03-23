@@ -37,11 +37,11 @@ export const PhotoSphere = () => {
     const markersPlugs = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
     if (!markersPlugs) return;
 
-    // instance.addEventListener("click", ({ data }) => {
-    //   console.log(
-    //     `${data.rightclick ? "right " : ""}clicked at yaw: ${data.yaw} pitch: ${data.pitch}`
-    //   );
-    // });
+    instance.addEventListener("click", ({ data }) => {
+      console.log(
+        `${data.rightclick ? "right " : ""}clicked at yaw: ${data.yaw} pitch: ${data.pitch}`
+      );
+    });
 
     markersPlugs.addEventListener("select-marker", ({ marker }) => {
       console.log("click marker", marker);
@@ -51,6 +51,13 @@ export const PhotoSphere = () => {
             "https://www.spreaker.com/episode/introduccion-a-la-planificacion-automatica-en-la-manufactura--59090807",
             "_blank"
           );
+          break;
+        case "semana2":
+          window.open(
+            "https://drive.google.com/file/d/1N_QExxQG_EsSD-1oijXUJ6WNxTaqSQnE/view?usp=sharing",
+            "_blank"
+          );
+          break;
       }
     });
   };
@@ -61,7 +68,9 @@ export const PhotoSphere = () => {
       height="100%"
       width="100%"
       adapter={CubemapAdapter}
-      defaultZoomLvl={0}
+      defaultZoomLvl={50}
+      defaultPitch={0.35}
+      defaultYaw="90deg"
       plugins={[
         // AutorotatePlugin,
         GyroscopePlugin,
@@ -96,6 +105,24 @@ export const PhotoSphere = () => {
                 html: Semana1,
                 anchor: "top center",
                 style: styles,
+              },
+              {
+                id: "titulo2",
+                position: {
+                  yaw: "90deg",
+                  pitch: "0.5",
+                },
+                html: "<h1>Eco-EnergIA, Inteligencia Artificial para la Eficiencia Energética Industrial</h1>",
+                anchor: "bottom center",
+                style: {
+                  backgroundColor: "#0007",
+                  color: "white",
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "20px",
+                  maxWidth: "90vw",
+                  padding: "0 10px",
+                  textAlign: "center",
+                },
               },
               {
                 id: "semana2",
