@@ -58,6 +58,12 @@ export const PhotoSphere = () => {
             "_blank"
           );
           break;
+        case "semana3":
+          window.open(
+            "https://drive.google.com/file/d/1VqSsLdxTz7u_gKHH-pH42DzDKWDjGxOa/view?usp=sharing",
+            "_blank"
+          );
+          break;
       }
     });
   };
@@ -69,8 +75,8 @@ export const PhotoSphere = () => {
       width="100%"
       adapter={CubemapAdapter}
       defaultZoomLvl={50}
-      defaultPitch={0.35}
-      defaultYaw="90deg"
+      defaultPitch={0.1}
+      defaultYaw="180deg"
       plugins={[
         // AutorotatePlugin,
         GyroscopePlugin,
@@ -133,6 +139,24 @@ export const PhotoSphere = () => {
                 html: Semana2,
                 anchor: "top center",
                 style: styles,
+              },
+              {
+                id: "titulo3",
+                position: {
+                  yaw: "180deg",
+                  pitch: "0.5",
+                },
+                html: "<h1>Storytelling</h1>",
+                anchor: "bottom center",
+                style: {
+                  backgroundColor: "#0007",
+                  color: "white",
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "20px",
+                  maxWidth: "90vw",
+                  padding: "0 10px",
+                  textAlign: "center",
+                },
               },
               {
                 id: "semana3",

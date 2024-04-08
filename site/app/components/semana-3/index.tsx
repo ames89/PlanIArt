@@ -7,7 +7,17 @@ const Semana: React.FC = () => {
       <h1 className={Css.header}>
         Integración de Tecnologías Inmersivas con la Planificación Automática
       </h1>
-      <p>¡Pronto más información!</p>
+      <p>
+        Smart San José Transformando la Planificación Urbana con Realidad Mixta
+      </p>
+      <p>
+        <a href="#">
+          <img className={Css.img} src="/icons/document-scanner.svg" />
+        </a>
+      </p>
+      <p>
+        <a href="#">Acceder al Storytelling</a>
+      </p>
     </div>
   );
 };
